@@ -35,7 +35,6 @@ nav{
 	width: 800px;
 	height: 100%;
 	margin-right: 15px;
-	margin-top:;
 }
 
 .nav_items {
@@ -48,6 +47,7 @@ nav{
 }
 
 .nav_items li {
+	list-style: none;
 	width: 140px;
 	/*height: 80px;*/
 	display:inline-block;
@@ -55,4 +55,13 @@ nav{
 	text-align: center;
 	line-height: 4;
 }
+
+.nav_items li a{
+	text-decoration: none;
+}
+   
+
+
+
+   /*INSERT THE CONTENT IN THIS SECTION, NEEDS THE GUTTERS TO BE PLACED AND THE FITTINGS MODIFIED*/
 
