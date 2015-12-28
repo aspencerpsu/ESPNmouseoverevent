@@ -112,6 +112,8 @@
 	z-index: -2000;
 	overflow: hidden;
 	position: relative;
+	vertical-align: 100%;
+	text-align: center;
 }
 
 .windows img{
