@@ -24,11 +24,11 @@
 	float: left;
 }
 
-.logo img{
+#image_dir{
 	vertical-align: middle;
 }
 
-nav{
+.first_nav nav {
 	font-family: Cantarell,sans-serif;
 	color: teal;
 	float:right;
@@ -61,7 +61,7 @@ nav{
 }
 
 .second_nav{
-	clear: both;
+	/*clear: both;*/
 	width: 1000px;
 	height: 150px;
 	position: relative;
@@ -70,39 +70,72 @@ nav{
 	margin-top: 10px;
 	border: 4px solid magenta;
 	background-color: gray;
+	z-index: 99;
+	overflow-x: hidden;
+	overflow-y: hidden;
 }
 
 #ar_l{
-	float: left;
+	clear: right;
 	margin-left: 10px;
 	margin-top: 60px;
+	z-index: 4000;
+	overflow: visible;
+	position: relative;
 }
 
 #ar_r{
 	float: right;
 	margin-right: 10px;
 	margin-top: 60px;
+	z-index: 400;
+	overflow: visible;
+	position: relative;
 }
 
 .mid_nav{
-	width: 800px;
+	clear: both;   
+	width: 2000px;
 	height: 100px;
-	border: ;
-	margin: 0 auto;
-	background:transparent;
+	border: .5px dotted black;
+	z-index: 98;
+	position: relative;
+	left: 40px;
+	top: -90px;
+	float: left;
+	margin-left: 20px;
 }
 
-img{
+.windows{
+	width: 150px;
+	display: inline-block;
+	z-index: -2000;
+	overflow: hidden;
+	position: relative;
+}
+
+.windows img{
 	width: 100px;
 	height: 100px;
 	border-radius: 25%;
-	display: inline-block;
+	margin-left: 20px;
+	overflow: hidden;
+	position: relative;
+	z-index: -3000;
+}
+
+.windows figcaption b{
+	color: white;
+	text-align: center;
+	font-family: 'Inconsolata', sans-serif;
 }
 
 figcaption{
+	display: block;
 	font-family: 'Inconsolata',sans-serif;
 	font-size: 1em;
 	color: white;
+	position: relative;
 }
 
 
