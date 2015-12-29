@@ -10,7 +10,7 @@ $(document).ready(function(){
   function BackToOrigin(e){
   	e.preventDefault();
     $('.mid_nav').animate({
-      left: '+=300px'
+      left: '+=350px'
     }, 600, "easeInOutCirc")
   }
   // Simple link  color change with a mouseover function
@@ -24,33 +24,37 @@ $(document).ready(function(){
 	);
 
 	// Navigate through a soon-to-be click second navigation
-	$("button").on('click', function(e){
-		var button_id = $(this).attr('id').toString();
-		var thestyle = $('.mid_nav').attr('style', 'left');
+	$("#ar_r").on('click', function(e){
 		e.preventDefault();
+		button_id = $(this).attr('id').toString();
+		var thestyle = $('.mid_nav').attr('style', 'left');
 		console.log(thestyle);
-		console.log(button_id);
-		if (button_id === "ar_r"){
-			var distance = parseInt($('.mid_nav').css('left'));
-			console.log(distance);
-			if (distance <= 0){
-				return console.log("cannot push to the left");
-			}
-			else
-				return PushNavLeft();
-		}
-		  // If the left arrow is clicked, return to original positon using the handler "BackToOrigin"
-		else if(button_id === "ar_l"){
-			distance = parseInt($('mid_nav').css('left'));
-			if (distance <= -300){
-				console.log(distance);
-				BackToOrigin();
-			return console.log("move_left");}
-			else
-				console.log("cannot move any further");
+		// determine the value of the position of the image gallery as a number
+		distance = parseInt($('.mid_nav').css('left').toString());
+		// If user clicked on the right arrow button and the rel pos. is less than or equal to 50 perform the PushNavLeft function above
+		if (button_id === "ar_r" && distance <= 50){
+			console.log(thestyle);
+			// This function isn't performing the push of the image galleries to the left, needs further review/edits
+			PushNavLeft();
+			// $('.mid_nav').animate({left:'-350px'}, 500, 'easeInOutCirc');
 		}
 		else
-			return console.log(false);
+			return console.log("cannot push to the right");
+	});
+		  // If the left arrow is clicked, return to original positon using the handler "BackToOrigin"
+	$('#ar_l').on('click', function(e){
+		// prevent the click action posted on the page.
+		e.preventDefault();
+		// button recognition for the click events.
+		button_id = $(this).attr('id').toString();
+		// don't want to use a local variable for this instance
+		if (button_id === "ar_l" && parseInt($('.mid_nav').css('left')) <= -300){
+			console.log('successful move' + $('.mid_nav').css('left').toString());
+			// perform the back-to-origin animation handlers
+			BackToOrigin(e);
+			}
+		else
+			return console.log('cannot push to the left');
 	});
 
 
