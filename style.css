@@ -126,17 +126,27 @@
 }
 
 #content h1{
-	font-family: Cantarell, sans-serif;
-	color: bisque;
-	display: block;
-	width: 125%%;
+    font-family: Cantarell, sans-serif;
+    color: bisque;
+    display: block;
+    width: 150%;
+    margin-left: -90px;
+    margin-right: 235px;
 }
 
 #content p{
 	font-family: Cantarell, sans-serif;
-	color: beige;
+	color: bisque;
+}
+#content label{
+	font-family: Cantarell, sans-serif;
+	color: bisque;
 }
 
+#content input{
+	width: 285px;
+    height: 20px;
+}
 .windows{
 	width: 150px;
 	display: inline-block;

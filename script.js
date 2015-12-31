@@ -57,5 +57,14 @@ $(document).ready(function(){
 			return console.log('cannot push to the left');
 	});
 
+	$('form').on('submit', function(e){
+		e.preventDefault();
+		get_text = $('input:text').val(); 
+		console.log(get_text);
+		$('.adding').text('Your sneaker(s) of \n \n');
+		$('.adding:eq(1)').text(get_text.toString());
+		$('.adding:eq(2)').text('is coming soon, just wait on it!');
+	});
+
 
 });
